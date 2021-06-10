@@ -189,7 +189,7 @@ const Form = ({ data: dataform }) => {
                                 <label className="form__label">Select industry to which you <br /> want to pitch</label>
                                 <div className="select">
                                     <select name="entertainment" id="entertainment" value={entertainment} onChange={changeSelect} className="form__select" >
-                                        <option value="1">Entertainment</option>
+                                        <option value="Entertainment">Entertainment</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
                                     </select>

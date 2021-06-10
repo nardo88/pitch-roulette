@@ -157,6 +157,8 @@ const Form = () => {
             method: 'POST',
             body: formData
         })
+
+        e.target.reset();
     }
 
 
@@ -167,7 +169,7 @@ const Form = () => {
                 <div className="container">
                     <div className="registration__wrapper">
                         <h2 className="registration__title">Sign up</h2>
-                        <form action="#!" className="form" onSubmit={onSubmit}>
+                        <form action="#!" className="form" onSubmit={onSubmit} autoComplete="off">
                             <div className="form__item">
                                 <label htmlFor="name" className="form__label">Business name:</label>
                                 <input className="form__input" name="name" id="name" type="text" value={name} onChange={changeInput} placeholder="Twitch" />

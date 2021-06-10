@@ -178,6 +178,12 @@ option {
     border-radius: 20px;
 }
 
+.form__btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .form__btn {
     width: 100%;
     background: #F6483B;
@@ -192,11 +198,18 @@ option {
     font-weight: bold;
     font-size: 20px;
     line-height: 136.7%;
-    /* or 27px */
-
-
     color: #FFFFFF;
 }
+
+.form__btn--two{
+    width: 181px;
+}
+
+.form__btn--transparent{
+    background: transparent;
+    border: 1px solid #FFFFFF;
+}
+
 
 .file-item {
     width: 100%;

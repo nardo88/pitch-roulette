@@ -47,13 +47,13 @@ const FormSignIn = () => {
                         <form action="#!" className="form" onSubmit={onSubmit} autoComplete="off">
                             <div className="form__item">
                                 <label htmlFor="email" className="form__label">Business e-mail:</label>
-                                <input className="form__input" name="email" id="email" type="email" value={email} onChange={changeInput} placeholder="Your mail" />
+                                <input className="form__input" name="email" id="email" type="email" value={email} onChange={changeInput} placeholder="Your mail" required />
                             </div>
 
 
                             <div className="form__item">
                                 <label htmlFor="password" className="form__label">Password:</label>
-                                <input className="form__input" id="password" type="password" name="password" value={password} onChange={changeInput} placeholder="Your password" />
+                                <input className="form__input" id="password" type="password" name="password" value={password} onChange={changeInput} placeholder="Your password" required/>
                             </div>
 
                             <div className="form__btn-wrapper">

@@ -4,7 +4,7 @@ import dropIcon from '../../img/drop.svg';
 import fileImg from '../../img/file.svg';
 import deleteFile from '../../img/remove-file.svg';
 
-const Form = ({data: dataform}) => {
+const Form = ({ data: dataform }) => {
 
 
 
@@ -64,18 +64,18 @@ const Form = ({data: dataform}) => {
         e.preventDefault();
         const target = e.target.closest('.dnd');
 
-        if (target){
+        if (target) {
             const data = target.dataset.drag;
 
             switch (data) {
                 case 'presentation':
                     setDrag(true)
                     break;
-            
+
                 case 'profile':
                     setDragProfile(true)
                     break;
-            
+
                 default:
                     break;
             }
@@ -88,18 +88,18 @@ const Form = ({data: dataform}) => {
         const target = e.target.closest('.dnd');
 
 
-        if (target){
+        if (target) {
             const data = target.dataset.drag;
 
             switch (data) {
                 case 'presentation':
                     setDrag(false)
                     break;
-            
+
                 case 'profile':
                     setDragProfile(false)
                     break;
-            
+
                 default:
                     break;
             }
@@ -112,25 +112,25 @@ const Form = ({data: dataform}) => {
 
         const target = e.target.closest('.dnd');
 
-        if (target){
+        if (target) {
             const data = target.dataset.drag;
             switch (data) {
                 case 'presentation':
                     let files = [...e.dataTransfer.files];
                     setPresentation(files)
                     break;
-            
+
                 case 'profile':
                     let files1 = [...e.dataTransfer.files];
                     setProfile(files1)
                     break;
-            
+
                 default:
                     break;
             }
         }
 
-        
+
     }
     // удаление файла с презентацией
     const removeFile = () => {
@@ -151,22 +151,29 @@ const Form = ({data: dataform}) => {
         formData.append('present', presentation[0]);
         formData.append('profile', profile[0]);
 
-        
-        for (let key in dataform){
+
+        for (let key in dataform) {
             formData.append(key, dataform[key])
         }
-        
+
         // отправляем данные на серв
         fetch('someApi.php', {
             method: 'POST',
             body: formData
         })
 
-        e.target.reset();
+        // сбрасываем форму
+        setName('');
+        setSite('');
+        setPresentation([]);
+        setProfile([]);
+        setDrag(false);
+        setDragProfile(false);
+
     }
 
 
-  
+
     return (
         <>
             <div className="registration">
@@ -193,27 +200,27 @@ const Form = ({data: dataform}) => {
                                 {
                                     presentation.length ?
 
-                                    <div className="file-item">
-                                        <div className="file-item__info">
-                                            <div className="file-item__img">
-                                                <img src={fileImg} alt="file icon" />
+                                        <div className="file-item">
+                                            <div className="file-item__info">
+                                                <div className="file-item__img">
+                                                    <img src={fileImg} alt="file icon" />
+                                                </div>
+                                                <span className="file-item__name">{presentation[0].name}</span>
                                             </div>
-                                            <span className="file-item__name">{presentation[0].name }</span>
+                                            <button className="file-item__delete" onClick={removeFile}>
+                                                <img src={deleteFile} alt="remove icon" />
+                                            </button>
                                         </div>
-                                        <button className="file-item__delete" onClick={removeFile}>
-                                            <img src={deleteFile} alt="remove icon" />
-                                        </button>
-                                    </div>
 
 
-                                    : <div data-drag="presentation" className={`dnd ${!drag ? "" : "dnd__active"}  `} onDrop={e => onDropHandler(e)} onDragStart={e => { dragStartHandler(e) }} onDragLeave={e => { dragLeaveHandler(e) }} onDragOver={e => { dragStartHandler(e) }}>
-                                        <span className="dnd__text">Drop your file</span>
-                                        <img src={dropIcon} alt="drop icon" />
-                                    </div>
+                                        : <div data-drag="presentation" className={`dnd ${!drag ? "" : "dnd__active"}  `} onDrop={e => onDropHandler(e)} onDragStart={e => { dragStartHandler(e) }} onDragLeave={e => { dragLeaveHandler(e) }} onDragOver={e => { dragStartHandler(e) }}>
+                                            <span className="dnd__text">Drop your file</span>
+                                            <img src={dropIcon} alt="drop icon" />
+                                        </div>
                                 }
                                 <div className="file">
                                     <div className="file__text">Upload</div>
-                                    <input type="file" onChange={changeFile}  required/>
+                                    <input type="file" onChange={changeFile} required />
                                 </div>
                             </div>
                             <div className="form__item">
@@ -236,25 +243,25 @@ const Form = ({data: dataform}) => {
                                 {
                                     profile.length ?
 
-                                    <div className="file-item">
-                                        <div className="file-item__info">
-                                            <div className="file-item__img">
-                                                <img src={fileImg} alt="file icon" />
+                                        <div className="file-item">
+                                            <div className="file-item__info">
+                                                <div className="file-item__img">
+                                                    <img src={fileImg} alt="file icon" />
+                                                </div>
+                                                <span className="file-item__name">{profile[0].name}</span>
                                             </div>
-                                            <span className="file-item__name">{profile[0].name }</span>
+                                            <button className="file-item__delete" onClick={removeFileProfile}>
+                                                <img src={deleteFile} alt="remove icon" />
+                                            </button>
                                         </div>
-                                        <button className="file-item__delete" onClick={removeFileProfile}>
-                                            <img src={deleteFile} alt="remove icon" />
-                                        </button>
-                                    </div>
 
 
-                                    : <div data-drag="profile" className={`dnd ${!dragProfile ? "" : "dnd__active"}  `} onDrop={e => onDropHandler(e)} onDragStart={e => { dragStartHandler(e) }} onDragLeave={e => { dragLeaveHandler(e) }} onDragOver={e => { dragStartHandler(e) }}>
-                                        <span className="dnd__text">Drop your file</span>
-                                        <img src={dropIcon} alt="drop icon" />
-                                    </div>
+                                        : <div data-drag="profile" className={`dnd ${!dragProfile ? "" : "dnd__active"}  `} onDrop={e => onDropHandler(e)} onDragStart={e => { dragStartHandler(e) }} onDragLeave={e => { dragLeaveHandler(e) }} onDragOver={e => { dragStartHandler(e) }}>
+                                            <span className="dnd__text">Drop your file</span>
+                                            <img src={dropIcon} alt="drop icon" />
+                                        </div>
                                 }
-                              
+
                                 <div className="file">
                                     <div className="file__text">Upload</div>
                                     <input type="file" onChange={changeFileProfile} required />

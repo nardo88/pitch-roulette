@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import '../Form/Form.css';
 
-const FormSignIn = () => {
+const FormSignUp = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
+    const [passwordRepeat, setRasswordRepeat] = useState('');
 
     // отправка формы
     const onSubmit = e => {
@@ -42,8 +44,8 @@ const FormSignIn = () => {
             <div className="registration">
                 <div className="container">
                     <div className="registration__wrapper">
-                        <h2 className="registration__title">Sign in</h2>
 
+                        <h2 className="registration__title">Sign up</h2>
                         <form action="#!" className="form" onSubmit={onSubmit} autoComplete="off">
                             <div className="form__item">
                                 <label htmlFor="email" className="form__label">Business e-mail:</label>
@@ -56,18 +58,24 @@ const FormSignIn = () => {
                                 <input className="form__input" id="password" type="password" name="password" value={password} onChange={changeInput} placeholder="Your password" />
                             </div>
 
+                            <div className="form__item">
+                                <label htmlFor="passwordRepeat" className="form__label">Repeat password:</label>
+                                <input className="form__input" id="passwordRepeat" type="password" value={passwordRepeat} onChange={changeInput} placeholder="Your password" />
+                            </div>
+
+
                             <div className="form__btn-wrapper">
-                                <button className="form__btn form__btn--two">Sign in</button>
-                                <Link className="form__btn form__btn--two form__btn--transparent" to="/sign_up_step_1">Register</Link>
+                                <Link className="form__btn form__btn--two form__btn--transparent" to="/">Sign in</Link>
+                                <Link className="form__btn form__btn--two " to="/sign_up_step_2">Register</Link>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
-
 
         </>
     )
 }
 
-export default FormSignIn;
+export default FormSignUp;

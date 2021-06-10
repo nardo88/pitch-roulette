@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Codec Pro News';
+    src: url('CodecPro-News.eot');
+    src: url('CodecPro-News.eot?#iefix') format('embedded-opentype'),
+        url('CodecPro-News.woff2') format('woff2'),
+        url('CodecPro-News.woff') format('woff'),
+        url('CodecPro-News.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('CodecPro-Bold.eot');
+    src: url('CodecPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('CodecPro-Bold.woff2') format('woff2'),
+        url('CodecPro-Bold.woff') format('woff'),
+        url('CodecPro-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

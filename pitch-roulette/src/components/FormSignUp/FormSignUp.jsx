@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 
 import '../Form/Form.css';
 
-const FormSignUp = () => {
+const FormSignUp = ({setData}) => {
 
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
@@ -12,13 +12,29 @@ const FormSignUp = () => {
     // для редиректа
     const [redirect, setRedirect] = useState(true);
 
+    // для ошибок
+    const [isError, setIsError] = useState(false);
+
     // отправка формы
     const onSubmitForm = e => {
         e.preventDefault();
-        
+
+        if (password !== passwordRepeat){
+            setIsError(true)
+            return;
+        }
+
+        const data = new FormData(e.target)
+        const obj = {}
+
+        for(let [name, value] of data) {
+            obj[name] = value;
+        }
+
+        setData(obj)
 
         // если все ок редиректим на следующий этап
-        setRedirect(false)
+        setRedirect(false);
     }
 
     const changeInput = e => {
@@ -58,12 +74,12 @@ const FormSignUp = () => {
 
                             <div className="form__item">
                                 <label htmlFor="password" className="form__label">Password:</label>
-                                <input className="form__input" id="password" type="password" name="password" value={password} onChange={changeInput} placeholder="Your password"  required/>
+                                <input className={`form__input ${!isError ? '' : 'error'}`} id="password" type="password" name="password" value={password} onChange={changeInput} placeholder="Your password"  required/>
                             </div>
 
                             <div className="form__item">
                                 <label htmlFor="passwordRepeat" className="form__label">Repeat password:</label>
-                                <input className="form__input" id="passwordRepeat" type="password" value={passwordRepeat} onChange={changeInput} placeholder="Your password" required />
+                                <input className={`form__input ${!isError ? '' : 'error'}`} id="passwordRepeat" type="password" value={passwordRepeat} onChange={changeInput} placeholder="Your password" required />
                             </div>
 
 

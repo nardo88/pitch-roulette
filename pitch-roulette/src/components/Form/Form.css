@@ -265,3 +265,8 @@ option {
     justify-content: center;
     background: transparent;
 }
+
+.error{
+    box-shadow: 0 0 5px 5px red;
+}
+

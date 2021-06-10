@@ -4,7 +4,7 @@ import dropIcon from '../../img/drop.svg';
 import fileImg from '../../img/file.svg';
 import deleteFile from '../../img/remove-file.svg';
 
-const Form = () => {
+const Form = ({data: dataform}) => {
 
 
 
@@ -152,6 +152,10 @@ const Form = () => {
         formData.append('profile', profile[0]);
 
         
+        for (let key in dataform){
+            formData.append(key, dataform[key])
+        }
+        
         // отправляем данные на серв
         fetch('someApi.php', {
             method: 'POST',
@@ -172,7 +176,7 @@ const Form = () => {
                         <form action="#!" className="form" onSubmit={onSubmit} autoComplete="off">
                             <div className="form__item">
                                 <label htmlFor="name" className="form__label">Business name:</label>
-                                <input className="form__input" name="name" id="name" type="text" value={name} onChange={changeInput} placeholder="Twitch" />
+                                <input className="form__input" name="name" id="name" type="text" value={name} onChange={changeInput} placeholder="Twitch" required />
                             </div>
                             <div className="form__item">
                                 <label className="form__label">Select industry to which you <br /> want to pitch</label>
@@ -209,12 +213,12 @@ const Form = () => {
                                 }
                                 <div className="file">
                                     <div className="file__text">Upload</div>
-                                    <input type="file" onChange={changeFile} />
+                                    <input type="file" onChange={changeFile}  required/>
                                 </div>
                             </div>
                             <div className="form__item">
                                 <label htmlFor="site" className="form__label">Share your website  (optional)</label>
-                                <input className="form__input" id="site" type="text" name="site" value={site} onChange={changeInput} placeholder="https://www.twitch.tv" />
+                                <input className="form__input" id="site" type="text" name="site" value={site} onChange={changeInput} placeholder="https://www.twitch.tv" required />
                             </div>
 
                             <div className="form__item">
@@ -253,7 +257,7 @@ const Form = () => {
                               
                                 <div className="file">
                                     <div className="file__text">Upload</div>
-                                    <input type="file" onChange={changeFileProfile} />
+                                    <input type="file" onChange={changeFileProfile} required />
                                 </div>
                             </div>
                             <button className="form__btn">Continue</button>

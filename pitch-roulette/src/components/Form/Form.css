@@ -67,8 +67,8 @@
 
 .form__select {}
 
-.option {
-    padding: 10px;
+option {
+    font-size: 18px;
 }
 
 .select {
@@ -119,6 +119,13 @@
     border: 1px dashed #FFFFFF;
     box-sizing: border-box;
     border-radius: 100px;
+    color: rgba(255, 255, 255, .5);
+
+
+}
+
+.dnd__active {
+    background: #3f6277;
 
 }
 
@@ -128,12 +135,9 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 136.7%;
-    color: rgba(255, 255, 255, .5);
 }
 
 .file {
-
-
     width: 122px;
     height: 55px;
     position: relative;
@@ -192,4 +196,57 @@
 
 
     color: #FFFFFF;
+}
+
+.file-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.file-item__info {
+    display: flex;
+    align-items: center;
+
+}
+
+.file-item__img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #F6483B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 13px;
+
+}
+
+
+.file-item__name {
+    font-family: 'Codec Pro';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 136.7%;
+    /* or 21px */
+
+
+    color: #FFFFFF;
+
+}
+
+.file-item__delete {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
 }

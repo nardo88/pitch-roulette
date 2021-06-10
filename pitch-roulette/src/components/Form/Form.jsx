@@ -35,7 +35,7 @@ const Form = () => {
                 break;
         }
     }
-
+    // изменение select
     const changeSelect = e => {
         const { name, value } = e.target;
 
@@ -50,19 +50,19 @@ const Form = () => {
                 break;
         }
     }
-
+    // выбор файла Presentation через input type=file
     const changeFile = e => {
         setPresentation(e.target.files)
     }
 
+    // выбор файла Profile через input type=file
     const changeFileProfile = e => {
         setProfile(e.target.files)
     }
-
+    // при перетаскивании файла на DnD меняем state который влияет на стили
     const dragStartHandler = e => {
         e.preventDefault();
         const target = e.target.closest('.dnd');
-
 
         if (target){
             const data = target.dataset.drag;
@@ -82,6 +82,7 @@ const Form = () => {
         }
     }
 
+    // при уходе файла с DnD меняем state который влияет на стили
     const dragLeaveHandler = e => {
         e.preventDefault();
         const target = e.target.closest('.dnd');
@@ -105,6 +106,7 @@ const Form = () => {
         }
     }
 
+    // отпустили файл над областью DnD
     const onDropHandler = e => {
         e.preventDefault();
 
@@ -112,7 +114,6 @@ const Form = () => {
 
         if (target){
             const data = target.dataset.drag;
-
             switch (data) {
                 case 'presentation':
                     let files = [...e.dataTransfer.files];
@@ -131,17 +132,17 @@ const Form = () => {
 
         
     }
-
+    // удаление файла с презентацией
     const removeFile = () => {
         setPresentation([]);
         setDrag(false);
     }
-
+    // удаление файла с профайлом
     const removeFileProfile = () => {
         setProfile([]);
         setDragProfile(false);
     }
-
+    // отправка формы
     const onSubmit = e => {
         e.preventDefault()
         // получаем данные полей
@@ -151,11 +152,11 @@ const Form = () => {
         formData.append('profile', profile[0]);
 
         
-        
-        // fetch('someApi.php', {
-        //     method: 'POST',
-        //     body: formData
-        // })
+        // отправляем данные на серв
+        fetch('someApi.php', {
+            method: 'POST',
+            body: formData
+        })
     }
 
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Form/Form.css';
 
-const FormSignIn = () => {
+const SignInCommuniti = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
@@ -47,7 +47,7 @@ const FormSignIn = () => {
 
                         <form action="#!" className="form" onSubmit={onSubmit} autoComplete="off">
                             <div className="form__item">
-                                <label htmlFor="email" className="form__label">Business e-mail:</label>
+                                <label htmlFor="email" className="form__label">E-mail:</label>
                                 <input className="form__input" name="email" id="email" type="email" value={email} onChange={changeInput} placeholder="Your mail" required />
                             </div>
 
@@ -59,7 +59,7 @@ const FormSignIn = () => {
 
                             <div className="form__btn-wrapper">
                                 <button className="form__btn form__btn--two">Sign in</button>
-                                <Link className="form__btn form__btn--two form__btn--transparent" to="/business/sign_up_step_1">Register</Link>
+                                <Link className="form__btn form__btn--two form__btn--transparent" to="/community/sign_up_step_1">Register</Link>
                             </div>
                         </form>
                     </div>
@@ -71,4 +71,4 @@ const FormSignIn = () => {
     )
 }
 
-export default FormSignIn;
+export default SignInCommuniti;

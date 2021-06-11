@@ -1,26 +1,22 @@
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import './App.css';
-import Form from './components/Form/Form';
-import FormSignIn from './components/FormSignIn/FormSignIn';
 import Header from './components/Header/Header';
-import FormSignUp from './components/FormSignUp/FormSignUp';
-import DropDown from './components/DropDown/DropDown';
+import Business from './components/Business/Business';
+import Community from './components/Community/Community';
 
-import { useState } from 'react';
 
 function App() {
 
-  const [data, setData] = useState(null)
 
   return (
     <BrowserRouter>
       <div className="App">
           <Header />
+          <Redirect push to="/business" />
           
-          <Route exact path="/" render={() => <FormSignIn /> } />
-          <Route exact path="/sign_up_step_1" render={() => <FormSignUp setData={setData} /> } />
-          <Route exact path="/sign_up_step_2" render={() => <Form data={data} /> } />
-          <Route exact path="/drop" render={() => <DropDown /> } />
+          <Route path="/business" render={() => <Business /> } />
+          <Route path="/community" render={() => <Community /> } />
+          
           
       </div>
     </BrowserRouter>

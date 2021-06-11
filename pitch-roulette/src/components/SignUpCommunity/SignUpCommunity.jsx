@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 
 import '../Form/Form.css';
 
-const FormSignUp = ({setData}) => {
+const SignUpCommunity = ({setData}) => {
 
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
@@ -67,7 +67,7 @@ const FormSignUp = ({setData}) => {
                         <h2 className="registration__title">Sign up</h2>
                         <form action="#!" className="form" autoComplete="off" onSubmit={onSubmitForm}>
                             <div className="form__item">
-                                <label htmlFor="email" className="form__label">Business e-mail:</label>
+                                <label htmlFor="email" className="form__label">E-mail:</label>
                                 <input className="form__input" name="email" id="email" type="email" value={email} onChange={changeInput} placeholder="Your mail"  required/>
                             </div>
 
@@ -84,7 +84,7 @@ const FormSignUp = ({setData}) => {
 
 
                             <div className="form__btn-wrapper">
-                                <Link className="form__btn form__btn--two form__btn--transparent" to="/business">Sign in</Link>
+                                <Link className="form__btn form__btn--two form__btn--transparent" to="/community">Sign in</Link>
                                 <button className="form__btn form__btn--two ">Register</button>
                             </div>
                         </form>
@@ -95,7 +95,7 @@ const FormSignUp = ({setData}) => {
 
             : 
 
-            <Redirect push to="/business/sign_up_step_2" />
+            <Redirect push to="/community/sign_up_step_2" />
             
             }
 
@@ -105,4 +105,4 @@ const FormSignUp = ({setData}) => {
     )
 }
 
-export default FormSignUp;
+export default SignUpCommunity;

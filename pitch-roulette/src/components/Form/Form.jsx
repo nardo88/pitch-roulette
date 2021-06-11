@@ -184,7 +184,7 @@ const Form = ({ data: dataform }) => {
 
             {
                 isOver ?
-                    <Сongratulations />
+                    <Сongratulations path="/business/dushboard" />
                     :
                     <div className="registration">
                         <div className="container">
@@ -224,7 +224,7 @@ const Form = ({ data: dataform }) => {
                                         }
                                         <div className="file">
                                             <div className="file__text">Upload</div>
-                                            <input type="file" onChange={changeFile} required />
+                                            <input type="file" onChange={changeFile}  />
                                         </div>
                                     </div>
                                     <div className="form__item">
@@ -263,7 +263,7 @@ const Form = ({ data: dataform }) => {
 
                                         <div className="file">
                                             <div className="file__text">Upload</div>
-                                            <input type="file" onChange={changeFileProfile} required />
+                                            <input type="file" onChange={changeFileProfile}  />
                                         </div>
                                     </div>
                                     <button className="form__btn">Continue</button>

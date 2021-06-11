@@ -121,7 +121,7 @@ const SignUpComLast = ({ data: dataform, industriesData }) => {
 
             {
                 isOver ?
-                    <Сongratulations />
+                    <Сongratulations path="/business/dushboard"/>
                     :
                     <div className="registration">
                     <div className="container">

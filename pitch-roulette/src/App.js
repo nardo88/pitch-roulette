@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Business from './components/Business/Business';
 import Community from './components/Community/Community';
+import Сongratulations from './components/Сongratulations/Сongratulations';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           
           <Route path="/business" render={() => <Business /> } />
           <Route path="/community" render={() => <Community /> } />
+          <Route path="/congratulations" render={() => <Сongratulations /> } />
           
           
       </div>

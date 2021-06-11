@@ -1,0 +1,59 @@
+.dushboard {
+    padding-top: 168px;
+}
+
+.container {}
+
+.dushboard__wrapper {
+    display: flex;
+}
+
+.dushboard__control {
+    
+}
+.dushboard__content{
+    border: 1px solid #000;
+    min-height: 100%;
+    width: 100%;
+}
+
+.control {
+    width: 200px;
+    flex-shrink: 0;
+    
+}
+
+.control__list {}
+
+.control__item {
+    margin-bottom: 32px;
+}
+
+.control__item:last-child{
+    margin-right: 0;
+}
+
+.control__link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 17px;
+    color: #253138;
+    text-decoration: none;
+
+}
+
+.control__icon {
+    margin-right: 26px;
+}
+
+.control__text {}
+
+
+.control__link--active svg path {
+    fill: #F6483B;
+}
+
+.control__link--active {
+    color: #F6483B;
+}

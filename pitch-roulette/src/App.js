@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Redirect } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Business from './components/Business/Business';
@@ -12,7 +12,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
           <Header />
-          <Redirect push to="/business" />
           
           <Route path="/business" render={() => <Business /> } />
           <Route path="/community" render={() => <Community /> } />

@@ -1,7 +1,13 @@
 import React from 'react';
-import '../../DushBoards.css'
 import { NavLink } from 'react-router-dom';
-
+import { Route } from 'react-router-dom';
+import GoLive from './GoLive/GoLive';
+import Network from './Network/Network';
+import Waitlist from './Waitlist/Waitlist';
+import Rating from './Rating/Rating';
+import Decks from './Decks/Decks';
+import Settings from './Settings/Settings';
+import Notifications from './Notifications/Notifications';
 
 const BusinessDushboard = () => {
     return (
@@ -78,6 +84,13 @@ const BusinessDushboard = () => {
                             </ul>
                         </div>
                         <div className="dushboard__content">
+                            <Route path="/business/dushboard/golive" render={() => <GoLive /> } />
+                            <Route path="/business/dushboard/network" render={() => <Network /> } />
+                            <Route path="/business/dushboard/waitlist" render={() => <Waitlist /> } />
+                            <Route path="/business/dushboard/rating" render={() => <Rating /> } />
+                            <Route path="/business/dushboard/decks" render={() => <Decks /> } />
+                            <Route path="/business/dushboard/settings" render={() => <Settings /> } />
+                            <Route path="/business/dushboard/notifications" render={() => <Notifications /> } />
 
                         </div>
                     </div>

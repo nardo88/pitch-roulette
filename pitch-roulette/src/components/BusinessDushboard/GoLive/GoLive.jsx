@@ -3,7 +3,15 @@ import React from 'react';
 const GoLive = () => {
     return (
         <>
-            Go Live
+            <div className="golive">
+                <div className="golive__viewport">
+
+                </div>
+                <div className="golive__control">
+                    
+                </div>
+
+            </div>
         </>
     ) 
 }

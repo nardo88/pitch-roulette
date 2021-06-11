@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import '../Form/Form.css';
+import Сongratulations from '../Сongratulations/Сongratulations'
 import dropIcon from '../../img/drop.svg';
 import fileImg from '../../img/file.svg';
 import deleteFile from '../../img/remove-file.svg';
 
 const SignUpComLast = ({ data: dataform, industriesData }) => {
+    // для окна с поздравлениями
+    const [isOver, setIsOver] = useState(false)
 
     // state для input
     const [profission, setProfission] = useState('');
@@ -107,62 +110,71 @@ const SignUpComLast = ({ data: dataform, industriesData }) => {
         setUsername('');
         setProfile([]);
         setDrag(false);
+        // показываем сообщение с подравляшками
+        setIsOver(true)
     }
 
 
 
     return (
         <>
-            <div className="registration">
-                <div className="container">
-                    <div className="registration__wrapper">
-                        <h2 className="registration__title">Sign up</h2>
-                        <form action="#!" className="form" onSubmit={onSubmit} autoComplete="off">
 
-                            <div className="form__item">
-                                <label className="form__label">Who are you?</label>
-                                <input className="form__input" id="site" type="text" name="profission" value={profission} onChange={changeInput} placeholder="Developer" required />
-                            </div>
-
-                            <div className="form__item">
-                                <label htmlFor="site" className="form__label">Username</label>
-                                <input className="form__input" id="site" type="text" name="username" value={username} onChange={changeInput} placeholder="@dog" required />
-                            </div>
-
-                            <div className="form__item">
-                                <label className="form__label">Profile Image</label>
-                                {
-                                    profile.length ?
-
-                                        <div className="file-item">
-                                            <div className="file-item__info">
-                                                <div className="file-item__img">
-                                                    <img src={fileImg} alt="file icon" />
-                                                </div>
-                                                <span className="file-item__name">{profile[0].name}</span>
-                                            </div>
-                                            <button className="file-item__delete" onClick={removeFile}>
-                                                <img src={deleteFile} alt="remove icon" />
-                                            </button>
-                                        </div>
-
-
-                                        : <div data-drag="presentation" className={`dnd ${!drag ? "" : "dnd__active"}  `} onDrop={e => onDropHandler(e)} onDragStart={e => { dragStartHandler(e) }} onDragLeave={e => { dragLeaveHandler(e) }} onDragOver={e => { dragStartHandler(e) }}>
-                                            <span className="dnd__text">Drop your file</span>
-                                            <img src={dropIcon} alt="drop icon" />
-                                        </div>
-                                }
-                                <div className="file">
-                                    <div className="file__text">Upload</div>
-                                    <input type="file" onChange={changeFile} />
+            {
+                isOver ?
+                    <Сongratulations />
+                    :
+                    <div className="registration">
+                    <div className="container">
+                        <div className="registration__wrapper">
+                            <h2 className="registration__title">Sign up</h2>
+                            <form action="#!" className="form" onSubmit={onSubmit} autoComplete="off">
+    
+                                <div className="form__item">
+                                    <label className="form__label">Who are you?</label>
+                                    <input className="form__input" id="site" type="text" name="profission" value={profission} onChange={changeInput} placeholder="Developer" required />
                                 </div>
-                            </div>
-
-                            <button className="form__btn">Continue</button>
-                        </form>
+    
+                                <div className="form__item">
+                                    <label htmlFor="site" className="form__label">Username</label>
+                                    <input className="form__input" id="site" type="text" name="username" value={username} onChange={changeInput} placeholder="@dog" required />
+                                </div>
+    
+                                <div className="form__item">
+                                    <label className="form__label">Profile Image</label>
+                                    {
+                                        profile.length ?
+    
+                                            <div className="file-item">
+                                                <div className="file-item__info">
+                                                    <div className="file-item__img">
+                                                        <img src={fileImg} alt="file icon" />
+                                                    </div>
+                                                    <span className="file-item__name">{profile[0].name}</span>
+                                                </div>
+                                                <button className="file-item__delete" onClick={removeFile}>
+                                                    <img src={deleteFile} alt="remove icon" />
+                                                </button>
+                                            </div>
+    
+    
+                                            : <div data-drag="presentation" className={`dnd ${!drag ? "" : "dnd__active"}  `} onDrop={e => onDropHandler(e)} onDragStart={e => { dragStartHandler(e) }} onDragLeave={e => { dragLeaveHandler(e) }} onDragOver={e => { dragStartHandler(e) }}>
+                                                <span className="dnd__text">Drop your file</span>
+                                                <img src={dropIcon} alt="drop icon" />
+                                            </div>
+                                    }
+                                    <div className="file">
+                                        <div className="file__text">Upload</div>
+                                        <input type="file" onChange={changeFile} />
+                                    </div>
+                                </div>
+    
+                                <button className="form__btn">Continue</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+            
 
         </>
     )

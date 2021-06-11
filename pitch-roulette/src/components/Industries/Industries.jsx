@@ -34,6 +34,10 @@ class Industries extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        this.props.setIndustriesData(this.state.selected);
+    }
+
     render() {
         return (
             <>

@@ -56,3 +56,19 @@
 .control__link--active {
     color: #F6483B;
 }
+
+
+.self{
+    width: 49%;
+    overflow: hidden;
+    position: relative;
+}
+
+.self__content{
+    width: 100%;
+    height: 515px;
+}
+
+.self__stars{
+    background: #000;
+}

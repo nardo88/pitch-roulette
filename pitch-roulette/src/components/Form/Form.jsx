@@ -3,15 +3,24 @@ import './Form.css';
 import dropIcon from '../../img/drop.svg';
 import fileImg from '../../img/file.svg';
 import deleteFile from '../../img/remove-file.svg';
+import DropDown from '../DropDown/DropDown';
 
 const Form = ({ data: dataform }) => {
 
+    // items for select industry 
+    const industry = ['Art', 'Marketing', 'Ecommerce', 'Education', 'Entertainment', 'Events', 'Fashion', 'Finance', 'Fitness and health', 'Gaming', 'Info technology', 'IOT', 'Logistics', 'Manufacturing', 'Media', 'Mobile Apps', 'Platforms', 'Restaurants', 'Real Estate', 'Retail', 'Service', 'Sports', 'Travel', 'Crypto'];
 
+    // items for select stage of the project
+    const stageOfProject = ['Problem/Solution Fit', 'MVP', 'Product/Market Fit', 'Language/Market Fit','Funnel Optimization', 'Channel/Product Fit', 'Scale', 'Maturity'];
 
+    // state для DropDown industry
+    const [industrySelected, setIndustrySelected] = useState('Entertainment');
+    // state для DropDown stageOfProject
+    const [stageOfProjectSelected, setStageOfProjectSelected] = useState('MVP');
+
+    // state для input
     const [name, setName] = useState('');
     const [site, setSite] = useState('');
-    const [entertainment, setEntertainment] = useState(1);
-    const [stage, setStage] = useState(1);
 
     // DnD c презентацией
     const [presentation, setPresentation] = useState([]);
@@ -35,21 +44,7 @@ const Form = ({ data: dataform }) => {
                 break;
         }
     }
-    // изменение select
-    const changeSelect = e => {
-        const { name, value } = e.target;
-
-        switch (name) {
-            case 'entertainment':
-                setEntertainment(value)
-                break;
-            case 'stage':
-                setStage(value);
-                break;
-            default:
-                break;
-        }
-    }
+  
     // выбор файла Presentation через input type=file
     const changeFile = e => {
         setPresentation(e.target.files)
@@ -150,6 +145,8 @@ const Form = ({ data: dataform }) => {
         // добавляем в объект файлы с презинтацией и профайлом
         formData.append('present', presentation[0]);
         formData.append('profile', profile[0]);
+        formData.append('industry', industrySelected);
+        formData.append('stage_of_project', stageOfProjectSelected);
 
 
         for (let key in dataform) {
@@ -187,13 +184,7 @@ const Form = ({ data: dataform }) => {
                             </div>
                             <div className="form__item">
                                 <label className="form__label">Select industry to which you <br /> want to pitch</label>
-                                <div className="select">
-                                    <select name="entertainment" id="entertainment" value={entertainment} onChange={changeSelect} className="form__select" >
-                                        <option value="Entertainment">Entertainment</option>
-                                        <option value="2">Value 2</option>
-                                        <option value="3">Value 3</option>
-                                    </select>
-                                </div>
+                                <DropDown items={industry} selected={industrySelected} setSelected={setIndustrySelected} />
                             </div>
                             <div className="form__item">
                                 <label className="form__label">Upload your Pitch Deck (optional)</label>
@@ -230,13 +221,8 @@ const Form = ({ data: dataform }) => {
 
                             <div className="form__item">
                                 <label className="form__label">What stage are you in? </label>
-                                <div className="select">
-                                    <select name="stage" id="stage" className="form__select" value={stage} onChange={changeSelect} >
-                                        <option value="1">MVP</option>
-                                        <option value="2">Value 2</option>
-                                        <option value="3">Value 3</option>
-                                    </select>
-                                </div>
+                                <DropDown items={stageOfProject} selected={stageOfProjectSelected} setSelected={setStageOfProjectSelected} />
+
                             </div>
                             <div className="form__item">
                                 <label className="form__label">Profile Image</label>

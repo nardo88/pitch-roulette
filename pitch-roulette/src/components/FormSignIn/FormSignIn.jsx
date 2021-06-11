@@ -19,7 +19,8 @@ const FormSignIn = () => {
             body: formData
         })
 
-        e.target.reset();
+        setEmail('');
+        setPasword('');
     }
 
     const changeInput = e => {
@@ -53,7 +54,7 @@ const FormSignIn = () => {
 
                             <div className="form__item">
                                 <label htmlFor="password" className="form__label">Password:</label>
-                                <input className="form__input" id="password" type="password" name="password" value={password} onChange={changeInput} placeholder="Your password" required/>
+                                <input className="form__input" id="password" type="password" name="password" value={password} onChange={changeInput} placeholder="Your password" required />
                             </div>
 
                             <div className="form__btn-wrapper">

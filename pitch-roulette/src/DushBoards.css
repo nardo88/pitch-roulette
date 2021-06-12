@@ -8,10 +8,9 @@
     display: flex;
 }
 
-.dushboard__control {
-    
-}
-.dushboard__content{
+.dushboard__control {}
+
+.dushboard__content {
     min-height: 100%;
     width: 100%;
 }
@@ -19,7 +18,7 @@
 .control {
     width: 200px;
     flex-shrink: 0;
-    
+
 }
 
 .control__list {}
@@ -28,7 +27,7 @@
     margin-bottom: 32px;
 }
 
-.control__item:last-child{
+.control__item:last-child {
     margin-right: 0;
 }
 
@@ -58,17 +57,91 @@
 }
 
 
-.self{
+.self {
     width: 49%;
     overflow: hidden;
     position: relative;
 }
 
-.self__content{
+.self__content {
     width: 100%;
     height: 515px;
 }
 
-.self__stars{
-    background: #000;
+.self__stars {
+    margin-right: 8px;
+}
+
+.self__data {
+    position: absolute;
+    top: 31px;
+    left: 40px;
+    right: 33px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.self__column {
+    display: flex;
+}
+
+.self__image {
+    margin-right: 13px;
+}
+
+.self__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.self__raiting {
+    display: flex;
+    align-items: center;
+}
+
+.self__raiting-value {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 11px;
+    color: #FFFFFF;
+}
+
+.self__name {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 11px;
+    color: #FFFFFF;
+}
+
+.self__control{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.self__btn{
+    width: 37px;
+    height: 37px;
+    background: transparent;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.self__settings{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
 }

@@ -1,4 +1,4 @@
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import './App.css';
 import './DushBoards.css'
 import Header from './components/Header/Header';
@@ -9,10 +9,13 @@ import BusinessDushboard from './components/BusinessDushboard/BusinessDushboard'
 
 function App() {
 
-
   return (
     <BrowserRouter>
       <div className="App">
+        {
+          window.location.pathname === '/' &&  <Redirect to="/business" />
+        }
+
           <Header />
           <Route path="/business" render={() => <Business /> } />
           <Route path="/community" render={() => <Community /> } />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import GoLive from './GoLive/GoLive';
 import Network from './Network/Network';
@@ -12,6 +12,10 @@ import Notifications from './Notifications/Notifications';
 const BusinessDushboard = () => {
     return (
         <>
+
+        {
+          window.location.pathname === '/business/dushboard' && <Redirect to="/business/dushboard/golive" />
+        }
             <div className="dushboard">
                 <div className="container">
                     <div className="dushboard__wrapper">

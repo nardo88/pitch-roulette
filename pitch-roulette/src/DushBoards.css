@@ -314,4 +314,72 @@
     font-size: 20px;
     line-height: 136.7%;
     color: rgba(0, 0, 0, 0.6);
+    flex-basis: 24%;
+}
+
+.list-item__raiting span {
+    margin: 0 2px;
+}
+
+.list-item__buttons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list-item__cam {
+    width: 27px;
+    height: 19px;
+    cursor: pointer;
+    background: url(./img/control_icon/cam.svg) no-repeat center;
+    border: none;
+    outline: none;
+    margin-right: 42px;
+}
+
+.list-item__control{
+    display: flex;
+    align-items: center;
+    width: 27px;
+    height: 19px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.list-item__control span {
+    width: 5px;
+    height: 5px;
+    background: #253138;
+    display: inline-block;
+    margin: 0 2px;
+    border-radius: 50%;
+}
+
+.list-item__control-wrapper{
+    position: relative;
+}
+
+.user-control{
+    position: absolute;
+    left: 0;
+    top: 115%;
+}
+
+.user-control__item{
+    margin-bottom: 5px;
+}
+
+.user-control__btn{
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    padding: 3px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+
 }

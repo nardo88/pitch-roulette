@@ -57,26 +57,31 @@
 }
 
 
-.self, .partner {
+.self,
+.partner {
     width: 49%;
     overflow: hidden;
     position: relative;
 }
 
-.self__content, .partner__content  {
+.self__content,
+.partner__content {
     width: 100%;
     height: 515px;
 }
 
-.self__stars, .partner__stars  {
+.self__stars,
+.partner__stars {
     margin-right: 8px;
 }
 
-.self__stars span, .partner__stars span{
+.self__stars span,
+.partner__stars span {
     margin: 0 2px;
 }
 
-.self__data, .partner__data  {
+.self__data,
+.partner__data {
     position: absolute;
     top: 31px;
     left: 40px;
@@ -87,25 +92,30 @@
 
 }
 
-.self__column, .partner__column  {
+.self__column,
+.partner__column {
     display: flex;
 }
 
-.self__image, .partner__image  {
+.self__image,
+.partner__image {
     margin-right: 13px;
 }
 
-.self__info, .partner__info  {
+.self__info,
+.partner__info {
     display: flex;
     flex-direction: column;
 }
 
-.self__raiting, .partner__raiting  {
+.self__raiting,
+.partner__raiting {
     display: flex;
     align-items: center;
 }
 
-.self__raiting-value, .partner__raiting-value {
+.self__raiting-value,
+.partner__raiting-value {
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
@@ -113,7 +123,8 @@
     color: #FFFFFF;
 }
 
-.self__name, .partner__name  {
+.self__name,
+.partner__name {
     margin-top: 12px;
     font-style: normal;
     font-weight: bold;
@@ -122,7 +133,8 @@
     color: #FFFFFF;
 }
 
-.self__control, .partner__control {
+.self__control,
+.partner__control {
     position: absolute;
     left: 0;
     right: 0;
@@ -132,7 +144,8 @@
     justify-content: center;
 }
 
-.self__btn, .partner__btn {
+.self__btn,
+.partner__btn {
     width: 37px;
     height: 37px;
     background: transparent;
@@ -143,25 +156,26 @@
     margin: 0 5px;
 }
 
-.self__settings, .partner__add-contact {
+.self__settings,
+.partner__add-contact {
     outline: none;
     cursor: pointer;
     border: none;
     background: transparent;
 }
 
-.golive__viewport{
+.golive__viewport {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.partner__content{
+.partner__content {
     width: 100%;
     height: 515px;
 }
 
-.golive__control{
+.golive__control {
     margin-top: 25px;
     display: flex;
     align-items: center;
@@ -169,7 +183,7 @@
 
 }
 
-.golive__btn{
+.golive__btn {
     width: 47px;
     height: 47px;
     border-radius: 50%;
@@ -181,4 +195,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.network {
+    border: 4px solid #343434;
+    box-sizing: border-box;
+    border-radius: 30px;
+    /* overflow: hidden; */
+}
+
+.network__head {
+    padding: 30px 30px 33px 69px;
+    background: #253138;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.network__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 136.7%;
+    color: #FFFFFF;
+    margin-right: 39px;
+}
+
+.network__connections {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 136.7%;
+    color: #F6483B;
+}
+
+.network-list{
+    padding: 27px 61px 27px 70px;
 }

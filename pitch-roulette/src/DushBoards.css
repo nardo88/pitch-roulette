@@ -72,6 +72,10 @@
     margin-right: 8px;
 }
 
+.self__stars span, .partner__stars span{
+    margin: 0 2px;
+}
+
 .self__data, .partner__data  {
     position: absolute;
     top: 31px;
@@ -174,4 +178,7 @@
     outline: none;
     cursor: pointer;
     margin: 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -184,7 +184,7 @@ const Form = ({ data: dataform }) => {
 
             {
                 isOver ?
-                    <Сongratulations path="/business/dushboard" />
+                    <Сongratulations path="/business/dushboard/golive" />
                     :
                     <div className="registration">
                         <div className="container">

@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/pitch-roulette/static/css/main.f9349dc4.chunk.css",
+    "main.js": "/pitch-roulette/static/js/main.0da11a4b.chunk.js",
+    "main.js.map": "/pitch-roulette/static/js/main.0da11a4b.chunk.js.map",
+    "runtime-main.js": "/pitch-roulette/static/js/runtime-main.b18805e0.js",
+    "runtime-main.js.map": "/pitch-roulette/static/js/runtime-main.b18805e0.js.map",
+    "static/js/2.b25c2ed5.chunk.js": "/pitch-roulette/static/js/2.b25c2ed5.chunk.js",
+    "static/js/2.b25c2ed5.chunk.js.map": "/pitch-roulette/static/js/2.b25c2ed5.chunk.js.map",
+    "index.html": "/pitch-roulette/index.html",
+    "static/css/main.f9349dc4.chunk.css.map": "/pitch-roulette/static/css/main.f9349dc4.chunk.css.map",
+    "static/js/2.b25c2ed5.chunk.js.LICENSE.txt": "/pitch-roulette/static/js/2.b25c2ed5.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/pitch-roulette/static/media/CodecPro-News.f7c35456.ttf",
+    "static/media/add_contact.aa5be343.svg": "/pitch-roulette/static/media/add_contact.aa5be343.svg",
+    "static/media/Form.css": "/pitch-roulette/static/media/arrow.0f705147.svg",
+    "static/media/btn1.aca13fb4.svg": "/pitch-roulette/static/media/btn1.aca13fb4.svg",
+    "static/media/DushBoards.css": "/pitch-roulette/static/media/cam.1754f498.svg",
+    "static/media/congratulation.b13649fd.png": "/pitch-roulette/static/media/congratulation.b13649fd.png",
+    "static/media/down.4f7e435c.svg": "/pitch-roulette/static/media/down.4f7e435c.svg",
+    "static/media/drop.8d4aecc5.svg": "/pitch-roulette/static/media/drop.8d4aecc5.svg",
+    "static/media/file.35798aa6.svg": "/pitch-roulette/static/media/file.35798aa6.svg",
+    "static/media/fullscreen.8769cc11.svg": "/pitch-roulette/static/media/fullscreen.8769cc11.svg",
+    "static/media/mic.3a4a8d20.svg": "/pitch-roulette/static/media/mic.3a4a8d20.svg",
+    "static/media/next.9842123a.svg": "/pitch-roulette/static/media/next.9842123a.svg",
+    "static/media/partner.20512e03.jpg": "/pitch-roulette/static/media/partner.20512e03.jpg",
+    "static/media/remove-file.22831bc0.svg": "/pitch-roulette/static/media/remove-file.22831bc0.svg",
+    "static/media/self.f67245ca.jpg": "/pitch-roulette/static/media/self.f67245ca.jpg",
+    "static/media/setting.5ff67fed.svg": "/pitch-roulette/static/media/setting.5ff67fed.svg",
+    "static/media/share.41cc0124.svg": "/pitch-roulette/static/media/share.41cc0124.svg",
+    "static/media/stop.8442d35a.svg": "/pitch-roulette/static/media/stop.8442d35a.svg",
+    "static/media/up.0bb87a3d.svg": "/pitch-roulette/static/media/up.0bb87a3d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b18805e0.js",
+    "static/js/2.b25c2ed5.chunk.js",
+    "static/css/main.f9349dc4.chunk.css",
+    "static/js/main.0da11a4b.chunk.js"
+  ]
+}

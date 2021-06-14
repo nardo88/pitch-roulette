@@ -2,7 +2,7 @@ import React from 'react';
 
 const WaitlistItem = ({data, changeInvited, deleteContributor}) => {
 
-    const { id, contributor, email, raiting, date, invited } = data;
+    const { id, contributor, email, raiting, date, invited, online } = data;
 
     const getRaiting = num => {
         const arrayStars = [];
@@ -31,6 +31,7 @@ const WaitlistItem = ({data, changeInvited, deleteContributor}) => {
             <div className="contributor">
                 <div className="contributor__image">
                     <img src={contributor} alt="" />
+                    {online && <div className="list-item__online"></div>}
                 </div>
             </div>
             <div className="email">{email}</div>

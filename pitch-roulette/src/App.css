@@ -35,3 +35,8 @@ font-display: swap;
 ul {
     list-style-type: none;
 }
+
+button{
+    cursor: pointer;
+    outline: none;
+}

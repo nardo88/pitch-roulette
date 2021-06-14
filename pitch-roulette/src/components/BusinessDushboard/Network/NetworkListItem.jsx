@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const NetworkListItem = ({data}) => {
 
-    const { avatar, online, name, raiting } = data;
+    const { avatar, online, name, raiting, id } = data;
 
     const [userControl, setUserControl] = useState(false)
 
@@ -28,6 +28,11 @@ const NetworkListItem = ({data}) => {
         return arrayStars;
     }
 
+    const deletUser = id => {
+        console.log(id);
+        setUserControl(false)
+    }
+
     return (
         <li className="network-list__item list-item">
             <div className="list-item__user">
@@ -45,7 +50,7 @@ const NetworkListItem = ({data}) => {
 
                     {
                         userControl && <ul className="user-control">
-                            <li className="user-control__item"><button className="user-control__btn" onClick={() => console.log('deleted')}>Delete</button></li>
+                            <li className="user-control__item"><button className="user-control__btn" onClick={() => deletUser(id)}>Delete</button></li>
                         </ul>
                     }
                     

@@ -1,0 +1,86 @@
+.performance {
+    background: #FBFBFB;
+    border: 1px solid #F6483B;
+    box-sizing: border-box;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.performance__header {
+    padding: 28px 57px 19px 73px;
+    background: #F6483B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.performance__share {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: url(../../../img/perfomance/share.svg) center no-repeat;
+}
+
+.performance__caption {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 136.7%;
+    color: #FFFFFF;
+}
+
+.performance__titles {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.performance__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: #253138;
+
+}
+
+.performance__values{
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.performance__body {
+    padding: 44px 53px 22px 75px;
+}
+
+.performance__first {
+    flex-basis: 30.5%;
+}
+
+.performance__second {
+    flex-basis: 26%;
+}
+
+.performance__third  {
+    flex-basis: 28%;
+}
+
+.performance__value {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.performance__time-pitch h3 {
+    max-width: 129px;
+}
+.performance__interes-rate h3{
+    max-width: 83px;
+}
+
+.performance__subscription-rate h3 {
+    max-width: 123px;
+}

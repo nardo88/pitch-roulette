@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
+const WaitlistItem = ({data, changeInvited, deleteContributor}) => {
 
-const NetworkListItem = ({data}) => {
-
-    const { avatar, online, name, raiting } = data;
-
-    const [userControl, setUserControl] = useState(false)
+    const { id, contributor, email, raiting, date, invited } = data;
 
     const getRaiting = num => {
         const arrayStars = [];
@@ -28,31 +25,28 @@ const NetworkListItem = ({data}) => {
         return arrayStars;
     }
 
+
     return (
-        <li className="network-list__item list-item">
-            <div className="list-item__user">
-                <div className="list-item__image">
-                    <img src={avatar} alt="user" />
-                    {online && <div className="list-item__online"></div>}
+        <li className="waitlist-list__item">
+            <div className="contributor">
+                <div className="contributor__image">
+                    <img src={contributor} alt="" />
                 </div>
             </div>
-            <div className="list-item__name">{name}</div>
-            <div className="list-item__raiting">{getRaiting(raiting)}</div>
-            <div className="list-item__buttons">
-                <button className="list-item__cam"></button>
-                <div className="list-item__control-wrapper">
-                    <button className="list-item__control" onClick={() => setUserControl(!userControl)}><span></span><span></span><span></span></button>
-
-                    {
-                        userControl && <ul className="user-control">
-                            <li className="user-control__item"><button className="user-control__btn" onClick={() => console.log('deleted')}>Delete</button></li>
-                        </ul>
-                    }
-                    
-                </div>
+            <div className="email">{email}</div>
+            <div className="raiting">{getRaiting(raiting)}</div>
+            <div className="date">{date}</div>
+            <div className="actions">
+                {
+                    invited ? 
+                        <button className="actions__btn invited" onClick={() => changeInvited(id)}>Invite</button> 
+                        : <button className="actions__btn uninvited" onClick={() =>  changeInvited(id)}>Invite</button>
+                }
+                
+                <button className="actions__btn" onClick={() => deleteContributor(id)}>Delete</button>
             </div>
         </li>
-    )
+    ) 
 }
 
-export default NetworkListItem;
+export default WaitlistItem

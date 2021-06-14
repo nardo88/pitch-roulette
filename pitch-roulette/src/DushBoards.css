@@ -398,7 +398,7 @@
     margin-right: 15px;
 }
 
-.waitlist__btn-wrapper{
+.waitlist__btn-wrapper {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -424,12 +424,109 @@
     cursor: pointer;
 }
 
-.titles__rating{
+.titles__rating {
     flex-basis: 20%;
 }
 
-.titles__date{
+.titles__date {
     flex-basis: 20%;
 }
 
-.titles__action{}
+.titles__action {}
+
+.waitlist-list__item {
+    margin-bottom: 21px;
+    display: flex;
+    align-items: center;
+
+}
+
+.waitlist-list__item:last-child {
+    margin-bottom: 0px;
+
+}
+
+.waitlist-list__item .contributor {
+    flex-basis: 21%;
+}
+
+.waitlist-list__item .contributor .contributor__image {
+    width: 55px;
+    height: 55px;
+    background: #253138;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.waitlist-list__item .contributor .contributor__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.waitlist-list__item .email {
+    flex-basis: 24%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.waitlist-list__item .raiting {
+    flex-basis: 20%;
+}
+
+.waitlist-list__item .raiting span {
+    margin: 0 2px;
+}
+
+.waitlist-list__item .date {
+    flex-basis: 20%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.waitlist-list__item .actions {
+    flex-basis: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.waitlist-list__item .actions__btn {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 136.7%;
+
+    color: #253138;
+    width: 65px;
+    height: 30px;
+    border: 1px solid #253138;
+    box-sizing: border-box;
+    border-radius: 100px;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+}
+
+.waitlist-list__item .invited {
+    color: #FFFFFF;
+    background: #F6483B;
+    border: 1px solid #F6483B;
+}
+
+.waitlist-list__no-item {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: rgba(0, 0, 0, 0.6);
+}

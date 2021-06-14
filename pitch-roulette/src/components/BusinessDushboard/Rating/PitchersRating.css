@@ -1,0 +1,21 @@
+.pitchers-rating {
+    background: #FBFBFB;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    margin-top: 21px;
+    overflow: hidden;
+}
+
+.pitchers-rating__header{
+    display: flex;
+    padding: 27px 57px 19px 73px;
+    background: #253138;
+}
+
+.pitchers-rating__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 136.7%;
+    color: #FFFFFF;
+}

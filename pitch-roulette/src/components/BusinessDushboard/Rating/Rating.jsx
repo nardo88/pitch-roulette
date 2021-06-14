@@ -1,5 +1,6 @@
 import React from 'react';
 import './Performance.css';
+import './PitchersRating.css';
 
 const Rating = () => {
     return (
@@ -41,13 +42,13 @@ const Rating = () => {
                             </div>
                         </div>
                         <div className="performance__titles">
-                            <div className="performance__first">
+                            <div className="performance__first performance__time-pitch">
                                 <h3 className="performance__title">Average time per pitch</h3>
                             </div>
-                            <div className="performance__second">
+                            <div className="performance__second performance__interes-rate">
                                 <h3 className="performance__title">Interest rate</h3>
                             </div>
-                            <div className="performance__third">
+                            <div className="performance__third performance__subscription-rate">
                                 <h3 className="performance__title">Subscription rate</h3>
                             </div>
                             <div className="performance__fourth">
@@ -70,6 +71,14 @@ const Rating = () => {
                         </div>
                     </div>
                 </div>
+           
+           
+                <div className="pitchers-rating">
+                    <div className="pitchers-rating__header">
+                        <h2 className="pitchers-rating__title">Pitchers rating</h2>
+                    </div>
+                </div>
+           
             </div>
         </>
     ) 

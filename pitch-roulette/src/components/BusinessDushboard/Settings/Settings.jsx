@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Settings.css';
 import DropDownDushboard from '../../DropDown/DropDownDushboard';
-import file from '../../../img/settings/file.svg';
+import fileIcon from '../../../img/settings/file.svg';
 
 const Settings = () => {
     // массив для dropDown
@@ -44,6 +44,12 @@ const Settings = () => {
     const [canChangeName, setCanChangeName] = useState(false);
     const saveName = () => {
         setCanChangeName(false)
+    }
+
+    // File
+    const [file, setFile] = useState({name: 'profileimage.jpg'})
+    const uploadFile = e => {
+        setFile(e.target.files[0]);
     }
 
     return (
@@ -137,15 +143,25 @@ const Settings = () => {
                         <div className="settings-form__item">
                             <label htmlFor="" className="settings-form__label">Profile picture:</label>
                             <span className="settings-form__edit">Edit</span>
-                            <div className="settings-form__file">
-                                <div className="info">
-                                    <div className="image">
-                                        <img src={file} alt="file" />
+                            {
+                                file ? 
+                                <div className="settings-form__file">
+                                    <div className="info">
+                                        <div className="image">
+                                            <img src={fileIcon} alt="file" />
+                                        </div>
+                                        <div className="name">{file.name}</div>
                                     </div>
-                                    <div className="name">profileimage.jpg</div>
+                                    <button className="remove" onClick={() => setFile(null)}></button>
                                 </div>
-                                <button className="remove"></button>
-                            </div>
+                                : <div className="settings-form__file">
+                                    <div className="upload">
+                                        <div className="upload__text">Upload file</div>
+                                        <input type="file" className="upload__input" onChange={uploadFile} />
+                                    </div>
+                                </div>
+                            }
+                            
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ const PitchersRatingItem = ({ num, data, upRaiting }) => {
                             <span>{raiting}</span>
                         </div>
                         :
-                        <button className="raiting__up" disabled={upvotes} onClick={(e) => upRaiting(id)}>
+                        <button className={`raiting__up ${upvotes && 'raiting__up--upvotesed'}`} onClick={(e) => upRaiting(id)}>
                             {upvotes ? <img src={upSelf} alt="up" /> : <img src={up} alt="up" />}
                             <span>{raiting}</span>
                         </button>

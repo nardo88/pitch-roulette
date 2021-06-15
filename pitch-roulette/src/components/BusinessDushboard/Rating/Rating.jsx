@@ -30,8 +30,17 @@ const Rating = () => {
         const newArr = [...pitchers]
         newArr.forEach(item=> {
             if (item.id === id){
-                item.upvotes = true
-                item.raiting++
+                if(item.upvotes){
+                    item.raiting--;
+                    item.upvotes = false
+                } else {
+                    item.raiting++;
+                    item.upvotes = true
+
+                }
+                // item.upvotes ? -- : ++item.raiting;
+                // item.upvotes = !item.upvotes;
+
             }
         })
 

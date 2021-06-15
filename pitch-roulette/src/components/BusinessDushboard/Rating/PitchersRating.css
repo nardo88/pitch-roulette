@@ -227,7 +227,7 @@
     color: #fff;
 }
 
-.pitchers-rating__item .raiting .raiting__up[disabled]{
-    background: #253138;
-    color: #fff;
+.raiting__up--upvotesed{
+    background: #253138 !important;
+    color: #fff !important;
 }

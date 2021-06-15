@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Performance.css';
 import './PitchersRating.css';
+import PitchersRatingItem from './PitchersRatingItem';
+import user1 from '../../../img/self.jpg'
+import user2 from '../../../img/partner.jpg'
 
 const Rating = () => {
+
+    const pitchers = [
+        {id: 1, name: 'Jetex', avatar: user1, waitlisters: 1201, industrie: 'IT', raiting: 3.0 },
+        {id: 2, name: 'INNoPAY', avatar: user2, waitlisters: 2243, industrie: 'Finance', raiting: 5.0 },
+        {id: 3, name: 'Kassa', avatar: user1, waitlisters: 1201, industrie: 'Gaming', raiting: 4.0 },
+        {id: 4, name: 'INNoPAX', avatar: user2, waitlisters: 1301, industrie: 'Manufacturing', raiting: 5.0 },
+        {id: 5, name: 'mrAnderson', avatar: user1, waitlisters: 2501, industrie: 'IT', raiting: 5.0 },
+    ]
+
+    const [pitchersInput, setPitchersInput] = useState('');
+
+    const changeInput = e => {
+        setPitchersInput(e.target.value);
+    } 
+
+    const onSubmit = (e) =>{
+        e.preventDefault()
+        
+    }
+
     return (
         <>
             <div className="rating">
@@ -76,6 +99,19 @@ const Rating = () => {
                 <div className="pitchers-rating">
                     <div className="pitchers-rating__header">
                         <h2 className="pitchers-rating__title">Pitchers rating</h2>
+                        <div className="pitchers-rating__control">
+                            <form className="pitchers-rating__form" onSubmit={onSubmit} >
+                                <input type="text" className="pitchers-rating__input" placeholder="Search" value={pitchersInput} onChange={changeInput} />
+                            </form>
+                            <button className="pitchers-rating__share"></button>
+                        </div>
+                    </div>
+                    <div className="pitchers-rating__body">
+                        <ul className="pitchers-rating__list">
+                            {
+                                pitchers.map((item, i) => <PitchersRatingItem key={item.id} num={i + 1} data={item} />)
+                            }
+                        </ul>
                     </div>
                 </div>
            

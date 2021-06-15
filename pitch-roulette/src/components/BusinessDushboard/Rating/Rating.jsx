@@ -7,13 +7,13 @@ import user2 from '../../../img/partner.jpg'
 
 const Rating = () => {
 
-    const pitchers = [
-        {id: 1, name: 'Jetex', avatar: user1, waitlisters: 1201, industrie: 'IT', raiting: 3.0 },
-        {id: 2, name: 'INNoPAY', avatar: user2, waitlisters: 2243, industrie: 'Finance', raiting: 5.0 },
-        {id: 3, name: 'Kassa', avatar: user1, waitlisters: 1201, industrie: 'Gaming', raiting: 4.0 },
-        {id: 4, name: 'INNoPAX', avatar: user2, waitlisters: 1301, industrie: 'Manufacturing', raiting: 5.0 },
-        {id: 5, name: 'mrAnderson', avatar: user1, waitlisters: 2501, industrie: 'IT', raiting: 5.0 },
-    ]
+    const [pitchers, setPitchers] = useState([
+        {id: 1, name: 'Jetex', avatar: user1, waitlisters: 1201, industrie: 'IT', raiting: 128, upvotes: false },
+        {id: 2, name: 'INNoPAY', avatar: user2, waitlisters: 2243, industrie: 'Finance', raiting: 78, upvotes: false },
+        {id: 3, name: 'Kassa', avatar: user1, waitlisters: 1201, industrie: 'Gaming', raiting: 55, upvotes: false },
+        {id: 4, name: 'INNoPAX', avatar: user2, waitlisters: 1301, industrie: 'Manufacturing', raiting: 32, upvotes: false },
+        {id: 5, name: 'mrAnderson', avatar: user1, waitlisters: 2501, industrie: 'IT', raiting: 15, upvotes: false },
+    ])
 
     const [pitchersInput, setPitchersInput] = useState('');
 
@@ -24,6 +24,18 @@ const Rating = () => {
     const onSubmit = (e) =>{
         e.preventDefault()
         
+    }
+
+    const upRaiting = id => {
+        const newArr = [...pitchers]
+        newArr.forEach(item=> {
+            if (item.id === id){
+                item.upvotes = true
+                item.raiting++
+            }
+        })
+
+        setPitchers(newArr);
     }
 
     return (
@@ -41,10 +53,10 @@ const Rating = () => {
                                 <h3 className="performance__title">Sessions</h3>
                             </div>
                             <div className="performance__second">
-                                <h3 className="performance__title">Liked</h3>
+                                <h3 className="performance__title">Upvotes</h3>
                             </div>
                             <div className="performance__third">
-                                <h3 className="performance__title">Disliked</h3>
+                                <h3 className="performance__title">Downvotes</h3>
                             </div>
                             <div className="performance__fourth">
                                 <h3 className="performance__title">Score</h3>
@@ -55,10 +67,10 @@ const Rating = () => {
                                 <span className="performance__value">128</span>
                             </div>
                             <div className="performance__second">
-                                <span className="performance__value">70</span>
+                                <span className="performance__value performance__value--up">70</span>
                             </div>
                             <div className="performance__third">
-                                <span className="performance__value">58</span>
+                                <span className="performance__value performance__value--down">58</span>
                             </div>
                             <div className="performance__fourth">
                                 <span className="performance__value">5.0</span>
@@ -109,7 +121,7 @@ const Rating = () => {
                     <div className="pitchers-rating__body">
                         <ul className="pitchers-rating__list">
                             {
-                                pitchers.map((item, i) => <PitchersRatingItem key={item.id} num={i + 1} data={item} />)
+                                pitchers.map((item, i) => <PitchersRatingItem key={item.id} num={i + 1} data={item} upRaiting={upRaiting} />)
                             }
                         </ul>
                     </div>

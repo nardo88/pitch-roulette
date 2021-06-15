@@ -1,9 +1,8 @@
 .pitchers-rating {
     background: #FBFBFB;
-    border: 1px solid #000000;
+    border: 4px solid #253138;
     border-radius: 30px;
     margin-top: 21px;
-    overflow: hidden;
 }
 
 .pitchers-rating__header {
@@ -12,6 +11,7 @@
     background: #253138;
     align-items: center;
     justify-content: space-between;
+    border-radius: 20px 20px 0 0;
 }
 
 .pitchers-rating__title {

@@ -1,0 +1,160 @@
+.settings {
+    background: #FBFBFB;
+    border: 4px solid #253138;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.settings__header {
+    background-color: #253138;
+    padding: 23px 69px 17px 70px;
+    border-radius: 20px 20px 0 0;
+}
+
+.settings__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 136.7%;
+    color: #FFFFFF;
+}
+
+.settings__body {
+    padding: 50px 72px 75px 75px;
+}
+
+.settings-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.settings-form__item {
+    max-width: 43%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+.settings-form__item .dropdown {}
+
+.settings-form__item .dropdown__btn {
+    background: #253138;
+    padding: 15px 26px 14px;
+
+}
+
+.settings-form__item .dropdown__value {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 136.7%;
+    color: #FFFFFF;
+}
+
+.settings-form__item .drobdown__content {
+
+    background: #253138;
+}
+
+.settings-form__item .dropdown__item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 136.7%;
+    color: #FFFFFF;
+}
+
+.settings-form__item .dropdown__item:hover {
+    background: #3e4b53;
+
+}
+
+.settings-form__input {
+    width: 100%;
+    background: #253138;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 18px 26px;
+
+}
+
+.settings-form__label {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: #253138;
+    margin-bottom: 12px;
+}
+
+.settings-form__edit {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 136.7%;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.settings-form__file .info .image{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #253138;
+    border-radius: 50%;
+    margin-right: 11px;
+}
+
+.settings-form__file .info .name{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 136.7%;
+    color: #253138;
+}
+
+.settings-form__file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.settings-form__file .info{
+    display: flex;
+    align-items: center;
+}
+
+.settings-form__file .remove{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    background: url(../../../img/settings/remove.png) no-repeat center;
+}
+
+.settings-form__item-value{
+    width: 100%;
+    background: #253138;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 18px 26px;
+}

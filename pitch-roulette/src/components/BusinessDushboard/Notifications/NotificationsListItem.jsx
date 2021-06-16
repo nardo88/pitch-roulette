@@ -1,11 +1,13 @@
 import React from 'react';
 import './Notifications.css';
 import cam from '../../../img/Notifications/camBtn.svg';
+import { Link } from 'react-router-dom';
+
 
 
 const NotificationsListItem = ({ data }) => {
 
-    const { name, industries, avatar, type, raiting, online } = data;
+    const { id, name, industries, avatar, type, raiting, online } = data;
 
 
     const getRaiting = num => {
@@ -33,11 +35,11 @@ const NotificationsListItem = ({ data }) => {
     return (
         <li className="notifications__item">
             <div className="notifications__image">
-                <div className="notifications__avatar">
+                <Link to={`/business/dushboard/profile/${id}`} className="notifications__avatar">
                     {avatar && <img src={avatar} alt="" />}
                     {online && <div className="notifications__online"></div>}
 
-                </div>
+                </Link>
             </div>
             <div className="notifications__name">
                 {name}

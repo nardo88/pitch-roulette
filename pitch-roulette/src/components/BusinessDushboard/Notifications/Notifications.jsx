@@ -7,7 +7,7 @@ const Notifications = () => {
 
     const notificationsData = [
         {id: 0, name: 'Jetex', industries: 'Fintech', avatar: user1, type: 'Request', raiting: 5, online: true },
-        {id: 1, name: 'Hilary', industries: 'Gaming', avatar: user1, type: 'Missed call', raiting: 5, online: false },
+        {id: 1, name: 'Hilary', industries: 'Gaming', avatar: null, type: 'Missed call', raiting: 4, online: false },
     ]
 
     return (

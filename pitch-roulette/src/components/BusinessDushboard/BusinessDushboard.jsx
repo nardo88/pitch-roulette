@@ -8,6 +8,7 @@ import Rating from './Rating/Rating';
 import Decks from './Decks/Decks';
 import Settings from './Settings/Settings';
 import Notifications from './Notifications/Notifications';
+import ProfileWithRoute from './Profile/Profile';
 
 const BusinessDushboard = () => {
     return (
@@ -95,6 +96,7 @@ const BusinessDushboard = () => {
                             <Route path="/business/dushboard/decks" render={() => <Decks /> } />
                             <Route path="/business/dushboard/settings" render={() => <Settings /> } />
                             <Route path="/business/dushboard/notifications" render={() => <Notifications /> } />
+                            <Route path="/business/dushboard/profile/:userId" render={() => <ProfileWithRoute /> } />
 
                         </div>
                     </div>

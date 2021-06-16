@@ -76,6 +76,8 @@
     width: 55px;
     height: 55px;
     overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .notifications__avatar img {

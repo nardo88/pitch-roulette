@@ -1,0 +1,134 @@
+.notifications {
+    border: 4px solid #343434;
+    border-radius: 30px;
+}
+
+.notifications__header {
+    padding: 24px 70px 24px 75px;
+    border-radius: 20px 20px 0 0;
+    background: #343434;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 136.7%;
+    color: #FFFFFF;
+}
+
+.notifications-data {
+    padding: 12px 17px;
+    background: #F6483B;
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.notifications-data__missed-call {
+    margin-left: 5px;
+}
+
+.notifications__no-data {
+    text-align: center;
+    padding: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136.7%;
+    /* or 27px */
+
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.notifications__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.notifications__item {
+    padding: 14px 70px 14px 61px;
+    border-bottom: 1px solid rgba(97, 97, 97, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.notifications__item:last-child {
+    border-bottom: none;
+}
+
+.notifications__image {
+    flex-basis: 20%;
+    position: relative;
+}
+
+.notifications__avatar {
+    background: #253138;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+}
+
+.notifications__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notifications__name {
+    flex-basis: 20%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: #253138;
+}
+
+.notifications__industries {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136.7%;
+    color: rgba(0, 0, 0, 0.6);
+    flex-basis: 20%;
+}
+
+.notifications__online {
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    background: #53B913;
+    border-radius: 20px;
+    width: 14px;
+    height: 14px;
+}
+
+.star {
+    margin: 0 2px;
+}
+
+.notifications__missed-call {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136.7%;
+    flex-basis: 20%;
+    color: #F6483B;
+}
+
+.notifications__raiting{
+    flex-basis: 20%;
+}
+
+.notifications__control{
+    flex-grow: 1;
+}

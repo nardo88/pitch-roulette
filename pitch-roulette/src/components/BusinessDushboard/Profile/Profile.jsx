@@ -16,10 +16,10 @@ const Profile = (props) => {
     ]
 
     const getData = i => {
-        return notificationsData.filter(item => item.id === i)
+        return notificationsData.filter(item => item.id === i)[0];
     }
 
-    const {name, profession, status, network,  industries, avatar, type, contributorRating, raiting, upvotes, waitlist} = getData(userId)[0];
+    const {name, profession, status, network,  industries, avatar, type, contributorRating, raiting, upvotes, waitlist} = getData(userId);
 
     const getIndustryList = (str) => {
         return str.split(', ').map((item, i) => <span key={i} className="profile-body__industries-item">{item}</span>)

@@ -163,17 +163,22 @@ const Form = ({ data: dataform }) => {
             method: 'POST',
             body: formData
         })
+            .then(response => {
+                if (response.ok) {
+                    // сбрасываем форму
+                    setName('');
+                    setSite('');
+                    setPresentation([]);
+                    setProfile([]);
+                    setDrag(false);
+                    setDragProfile(false);
 
-        // сбрасываем форму
-        setName('');
-        setSite('');
-        setPresentation([]);
-        setProfile([]);
-        setDrag(false);
-        setDragProfile(false);
-        
-        // показываем поздравление 
-        setIsOver(true)
+                    // показываем поздравление 
+                    setIsOver(true)
+                }
+            })
+
+
 
     }
 
@@ -224,7 +229,7 @@ const Form = ({ data: dataform }) => {
                                         }
                                         <div className="file">
                                             <div className="file__text">Upload</div>
-                                            <input type="file" onChange={changeFile}  />
+                                            <input type="file" onChange={changeFile} />
                                         </div>
                                     </div>
                                     <div className="form__item">
@@ -263,7 +268,7 @@ const Form = ({ data: dataform }) => {
 
                                         <div className="file">
                                             <div className="file__text">Upload</div>
-                                            <input type="file" onChange={changeFileProfile}  />
+                                            <input type="file" onChange={changeFileProfile} />
                                         </div>
                                     </div>
                                     <button className="form__btn">Continue</button>

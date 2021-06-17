@@ -1,6 +1,5 @@
 import { Route, BrowserRouter, Redirect } from 'react-router-dom';
-import './App.css';
-import './DushBoards.css'
+import './styles/scss/main.scss'
 import Header from './components/Header/Header';
 import Business from './components/Business/Business';
 import Community from './components/Community/Community';

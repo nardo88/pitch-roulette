@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Codec Pro News';
+    src: url('../fonts/CodecPro-News.eot');
+    src: url('../fonts/CodecPro-News.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CodecPro-News.woff2') format('woff2'),
+        url('../fonts/CodecPro-News.woff') format('woff'),
+        url('../fonts/CodecPro-News.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+font-family: 'Codec Pro';
+src: url('../fonts/CodecPro-Bold.eot');
+src: url('../fonts/CodecPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CodecPro-Bold.woff2') format('woff2'),
+    url('../fonts/CodecPro-Bold.woff') format('woff'),
+    url('../fonts/CodecPro-Bold.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}

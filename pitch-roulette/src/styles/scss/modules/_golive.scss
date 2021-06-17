@@ -1,0 +1,231 @@
+.golive{
+    &__viewport {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__control {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    &__btn {
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        background: #253138;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 0 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.self {
+    width: 49%;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        width: 100%;
+        height: 515px;
+    }
+
+    &__stars {
+        margin-right: 8px;
+
+        span {
+            margin: 0 2px;
+        }
+
+    }
+
+    &__data {
+        position: absolute;
+        top: 31px;
+        left: 40px;
+        right: 33px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__column {
+        display: flex;
+
+    }
+
+    &__image {
+        margin-right: 13px;
+
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__raiting {
+        display: flex;
+        align-items: center;
+
+        &-value {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 11px;
+            color: #FFFFFF;
+        }
+    }
+
+    &__name {
+        margin-top: 12px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 11px;
+        color: #FFFFFF;
+    }
+
+    &__control {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__btn {
+        width: 37px;
+        height: 37px;
+        background: transparent;
+        border-radius: 50%;
+        outline: none;
+        border: 1px solid #FFFFFF;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+
+    &__settings {
+        outline: none;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+}
+
+
+
+.partner {
+    width: 49%;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        width: 100%;
+        height: 515px;
+    }
+
+    &__stars {
+        margin-right: 8px;
+
+        span {
+            margin: 0 2px;
+        }
+    }
+
+    &__data {
+        position: absolute;
+        top: 31px;
+        left: 40px;
+        right: 33px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+    }
+
+    &__column {
+        display: flex;
+    }
+
+    &__image {
+        margin-right: 13px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__raiting {
+        display: flex;
+        align-items: center;
+
+        &-value {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 11px;
+            color: #FFFFFF;
+        }
+    }
+
+    &__name {
+        margin-top: 12px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 11px;
+        color: #FFFFFF;
+    }
+
+    &__control {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__btn {
+        width: 37px;
+        height: 37px;
+        background: transparent;
+        border-radius: 50%;
+        outline: none;
+        border: 1px solid #FFFFFF;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+
+
+    &__add-contact {
+        outline: none;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    &__content {
+        width: 100%;
+        height: 515px;
+    }
+}
+
+
+

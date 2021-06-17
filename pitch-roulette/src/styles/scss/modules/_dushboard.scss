@@ -1,0 +1,50 @@
+.dushboard {
+    padding-top: 140px;
+    padding-bottom: 74px;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__content {
+        min-height: 100%;
+        width: 100%;
+    }
+}
+
+.control {
+    width: 200px;
+    flex-shrink: 0;
+    padding-top: 12px;
+
+    &__item {
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 17px;
+        color: #253138;
+        text-decoration: none;
+    }
+
+    &__icon {
+        margin-right: 26px;
+    }
+
+    &__link--active svg path {
+        fill: #F6483B;
+    }
+
+    &__link--active {
+        color: #F6483B;
+    }
+
+}
+

@@ -177,9 +177,6 @@ const Form = ({ data: dataform }) => {
                     setIsOver(true)
                 }
             })
-
-
-
     }
 
 
